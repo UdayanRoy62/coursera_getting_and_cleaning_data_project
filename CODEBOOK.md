@@ -13,19 +13,15 @@ The data for this project and its corresponding codebook can be downloaded at ht
 
 3. Labels are applied as such:
 
-  *"Subject" applied on the subject_test.txt and subject_train.txt data (as mentioned in the original data readme.txt, this is a subject identifier and therefore does not contain personally identifiable information).
-
-  *"activity" first applied on the Y_test.txt and Y_train.txt data and the corresponding "Activity.Name" applied from the activity_labels.txt after merging test and training datasets.
-
-  *Respective labels assigned for measurements from the features.txt data.
-
-  *Variable labels for selected measurements are renamed for clarity.
+  * "Subject" applied on the subject_test.txt and subject_train.txt data (as mentioned in the original data readme.txt, this is a subject identifier and therefore does not contain personally identifiable information).
+  * "activity" first applied on the Y_test.txt and Y_train.txt data and the corresponding "Activity.Name" applied from the activity_labels.txt after merging test and training datasets.
+  * Respective labels assigned for measurements from the features.txt data.
+  * Variable labels for selected measurements are renamed for clarity.
 
 4. There are two tidy datasets created:
 
-  *"data" is the full list of observations of selected measurements found in section __Selected Variable Labels (Original & Renamed in Tidy Datasets)__ with corresponding "Subject" and "Activity.Name" and written to a file called __UCI_HAR_Dataset_TidyData.txt__.
-
-  *"data.averages" is the average of the measurements from "data", grouped by "Subject" and "Activity.Name" and written to a file called __UCI_HAR_Dataset_TidyDataWithAverages.txt__. This is the uploaded final file.
+  * "data" is the full list of observations of selected measurements found in section __Selected Variable Labels (Original & Renamed in Tidy Datasets)__ with corresponding "Subject" and "Activity.Name" and written to a file called __UCI_HAR_Dataset_TidyData.txt__.
+  * "data.averages" is the average of the measurements from "data", grouped by "Subject" and "Activity.Name" and written to a file called __UCI_HAR_Dataset_TidyDataWithAverages.txt__. This is the uploaded final file.
 
 #Methodology
 

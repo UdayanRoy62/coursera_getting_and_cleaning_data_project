@@ -26,19 +26,19 @@ The following is the list of steps used in the run_analysis.R file:
 
 1. Load dplyr library
 2. Load the features.txt file 
-  *Create the rename.feature function to rename the variable labels of measurements that we want (i.e. mean and standard deviation) 
-  *Create another column with renamed variable labels called proper.name 
+  * Create the rename.feature function to rename the variable labels of measurements that we want (i.e. mean and standard deviation) 
+  * Create another column with renamed variable labels called proper.name 
 3. Load the activity names from activity_labels.txt with columns named "activity" and "Activity.Name"
 4. Consolidate the test data set 
-  *Read subject_test.txt with column named "Subject" 
-  *Read Y_test.txt with the column named "activity" 
-  *Read X_test.txt with the columns named from the proper.name column of the features table 
-  *Column bind the three tables 
+  * Read subject_test.txt with column named "Subject" 
+  * Read Y_test.txt with the column named "activity" 
+  * Read X_test.txt with the columns named from the proper.name column of the features table 
+  * Column bind the three tables 
 5. Consolidate the training data set 
-  *Read subject_train.txt with column named "Subject" 
-  *Read Y_train.txt with the column named "activity" 
-  *Read X_train.txt with the columns named from the proper.name column of the features table 
-  *Column bind the three tables 
+  * Read subject_train.txt with column named "Subject" 
+  * Read Y_train.txt with the column named "activity" 
+  * Read X_train.txt with the columns named from the proper.name column of the features table 
+  * Column bind the three tables 
 6. Merge the test and training datasets using row binding
 7. Assign the Activity.Name for each observation using the merge function as both the merged dataset and the activity names table shares the common ID activity
 8. Select "Subject", "Activity.Name" and variables containing means and standard deviations of features (by filtering measurements with the text mean, std and meanFreq in the original name of the measurement found in the features.txt) and assign it to the data table "data"
@@ -53,29 +53,23 @@ The script also includes remarks at each major step and contains message outputs
 
 Although there are 86 measurements with the word mean and std that refer to mean and standard deviation respectively, 7 of them are about the angle. Hence, the measurements of the following variables are excluded in the tidy datasets.
 
-  *angle(BodyTimeAccelerationMean,gravity)
-
-  *angle(BodyTimeAccelerationMean,gravity)
-
-  *angle(BodyTimeAccelerationMean,gravity)
-
-  *angle(BodyTimeGyroJerkMean,gravityMean)
-
-  *angle(X,gravityMean)
-
-  *angle(Y,gravityMean)
-
-  *angle(Z,gravityMean)
+  * angle(BodyTimeAccelerationMean,gravity)
+  * angle(BodyTimeAccelerationMean,gravity)
+  * angle(BodyTimeAccelerationMean,gravity)
+  * angle(BodyTimeGyroJerkMean,gravityMean)
+  * angle(X,gravityMean)
+  * angle(Y,gravityMean)
+  * angle(Z,gravityMean)
 
 #Functions found within run_analysis.R
 
 rename.feature is used to rename the parameter (in this case, the variable label of measurements) to a more readable format. This includes expanding the original variable labels for features to fuller descriptions, and examples of these include:
 
-  *std is now StandardDeviation 
-  *Acc is now Acceleration 
-  *tbody is now BodyTime to indicate it is a measurement of time 
-  *fGravity is now GravityFFT to indicate the f is for the FFT frequency 
-  *means and standard deviations of the X, Y and Z axis measurements also clearly denote ForAxisX, ForAxisY, etc 
+  * std is now StandardDeviation 
+  * Acc is now Acceleration 
+  * tbody is now BodyTime to indicate it is a measurement of time 
+  * fGravity is now GravityFFT to indicate the f is for the FFT frequency 
+  * means and standard deviations of the X, Y and Z axis measurements also clearly denote ForAxisX, ForAxisY, etc 
 
 Please see CODEBOOK.md for the full list of original variable labels and renamed variable labels.
 
